@@ -149,8 +149,8 @@ export default function App() {
         {/* 3 WHY UPANISHADS */}
         <section id="why" className="section">
           <div className="shell">
-            <div className="reveal"><Heading eyebrow="Why Upanishads" title="What are the Upanishads?" sub="They are Brahm Vidya — the essence of the Vedas. Across 14 days at Janjgir, Raseshwari Devi Ji unfolds them as a living path: from the rare gift of human birth, through surrender to the Guru, to selfless love of Shri Krishna." /></div>
-            <p className="text-center text-sm text-[var(--brown-soft)] mt-4 max-w-3xl mx-auto">Upanishad Gyanamrit · 14 discourses · Janjgir, Chhattisgarh · 25 Sept – 8 Oct 2026 · in the lineage of Jagadguru Shri Kripalu Ji Maharaj</p>
+            <div className="reveal"><Heading eyebrow="Why Upanishads" title="What are the Upanishads?" sub="They are Brahm Vidya — the essence of the Vedas. Across 14 days in Rohtak, Raseshwari Devi Ji unfolds them as a living path: from the rare gift of human birth, through surrender to the Guru, to selfless love of Shri Krishna." /></div>
+            <p className="text-center text-sm text-[var(--brown-soft)] mt-4 max-w-3xl mx-auto">Upanishad Gyanamrit · 14 discourses · Rohtak, Haryana · 27 Nov – 10 Dec 2026 · in the lineage of Jagadguru Shri Kripalu Ji Maharaj</p>
             <div className="mt-8 grid md:grid-cols-3 gap-4 items-stretch">
               {WHY.map((c) => (
                 <article key={c.t} className="reveal card p-6 flex flex-col"><p className="font-serif text-4xl text-[var(--saffron)]">{c.t}</p><h3 className="mt-3 font-bold text-lg">{c.h}</h3><p className="body mt-2 !text-[16px]">{c.d}</p></article>
