@@ -178,7 +178,7 @@ export default function App() {
         <section className="relative paisley-bg overflow-x-clip">
           <div className="shell relative pt-6 sm:pt-8 pb-12 text-center">
             <figure className="photo-block m-0 mx-auto w-full max-w-[980px] min-w-0">
-              <img src="/assets/hero-banner.webp" alt="Upanishad Gyanamrit Rohtak banner — 27th November to 10th December 2026, 6 pm to 8 pm" className="block w-full max-w-full h-auto rounded-[16px] border border-[var(--line)] shadow-[0_18px_40px_rgba(74,20,5,.12)]" style={{ objectFit: "contain" }} />
+              <img src="assets/hero-banner.webp" alt="Upanishad Gyanamrit Rohtak banner — 27th November to 10th December 2026, 6 pm to 8 pm" className="block w-full max-w-full h-auto rounded-[16px] border border-[var(--line)] shadow-[0_18px_40px_rgba(74,20,5,.12)]" style={{ objectFit: "contain" }} />
             </figure>
             <div className="hero-glow left-1/2 -translate-x-1/2 top-2" aria-hidden="true" />
             <div className="relative hero-in max-w-3xl mx-auto mt-8">
@@ -244,7 +244,7 @@ export default function App() {
                 </div>
               </div>
               <figure className="reveal photo-block m-0 mx-auto w-full max-w-[480px] min-w-0 self-start lg:sticky lg:top-24">
-                <div className="photo-frame arch"><div className="arch overflow-hidden bg-white"><img src="/assets/seated-stage.webp" alt="H.H. Raseshwari Devi Ji seated on a white stage in yellow robes" className="w-full max-w-full h-auto" style={{ objectFit: "contain" }} /></div></div>
+                <div className="photo-frame arch"><div className="arch overflow-hidden bg-white"><img src="assets/seated-stage.webp" alt="H.H. Raseshwari Devi Ji seated on a white stage in yellow robes" className="w-full max-w-full h-auto" style={{ objectFit: "contain" }} /></div></div>
                 <figcaption className="caption">Delivering a discourse</figcaption>
               </figure>
             </div>
@@ -265,7 +265,7 @@ export default function App() {
         <section id="speaker" className="section bg-[var(--ivory)] border-y border-[var(--line)]">
           <div className="shell grid lg:grid-cols-2 gap-10 items-start">
             <figure className="reveal photo-block m-0 mx-auto w-full max-w-[480px] min-w-0">
-              <div className="photo-frame arch"><div className="arch overflow-hidden bg-white"><img src="/assets/close-up.webp" alt="H.H. Raseshwari Devi Ji smiling at a microphone" className="w-full max-w-full h-auto" style={{ objectFit: "contain" }} /></div></div>
+              <div className="photo-frame arch"><div className="arch overflow-hidden bg-white"><img src="assets/close-up.webp" alt="H.H. Raseshwari Devi Ji smiling at a microphone" className="w-full max-w-full h-auto" style={{ objectFit: "contain" }} /></div></div>
               <figcaption className="caption">H.H. Raseshwari Devi Ji</figcaption>
               <p className="text-center mt-4 font-serif italic text-lg">"Knowledge ripens only when it becomes love."</p>
             </figure>
@@ -398,7 +398,7 @@ export default function App() {
               <h2 className="text-3xl font-serif text-[#4A2310] mt-2">Find Rohtak on the Map</h2>
             </div>
             <img
-              src="/assets/haryana_rohtak_map.webp"
+              src="assets/haryana_rohtak_map.webp"
               alt="Map of Haryana with Rohtak district highlighted in saffron and pinned"
               className="reveal w-full max-w-4xl mx-auto mt-6 rounded-2xl border border-[#E8C9A0] shadow-sm"
             />
