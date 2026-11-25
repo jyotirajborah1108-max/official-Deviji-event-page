@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Phone, MapPin, Clock, Heart, BookOpen, Sparkles, ChevronDown, ArrowRight, Sun, Flame, Flower2, HelpCircle, Menu, X } from "lucide-react";
+import { Phone, MapPin, Clock, Heart, BookOpen, Sparkles, ArrowRight, Sun, Flame, Flower2, HelpCircle, ChevronDown } from "lucide-react";
 
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfmUEWST6BYDwi7VvSzpgliNR4fYBojN1o_jcfyRfjX4c-ssw/viewform?usp=publish-editor";
 
@@ -83,17 +83,6 @@ function Heading({ eyebrow, title, hindi, sub, center }: { eyebrow: string; titl
 export default function App() {
   const [selectedDay, setSelectedDay] = useState(1);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const headerRef = React.useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const onDown = (e: MouseEvent) => { if (headerRef.current && !headerRef.current.contains(e.target as Node)) setMenuOpen(false); };
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMenuOpen(false); };
-    document.addEventListener("mousedown", onDown);
-    document.addEventListener("keydown", onKey);
-    return () => { document.removeEventListener("mousedown", onDown); document.removeEventListener("keydown", onKey); };
-  }, [menuOpen]);
 
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -106,49 +95,6 @@ export default function App() {
 
   return (
     <div data-safe-area-inset-root style={{ boxSizing: "border-box", paddingTop: "var(--safe-area-inset-top)" }} className="min-h-screen bg-[var(--cream)] text-[var(--brown)] overflow-x-clip">
-      <div className="bg-[var(--saffron)] text-white text-[12px] sm:text-[13px]">
-        <div className="shell py-2 flex flex-wrap items-center justify-center sm:justify-between gap-x-5 gap-y-1">
-          <p className="font-semibold tracking-wide">27 Nov – 10 Dec 2026 &nbsp;•&nbsp; Rohtak &nbsp;•&nbsp; Free Entry</p>
-          <a href="https://www.youtube.com/watch?v=8bOYzlsuDWI" target="_blank" rel="noopener" className="font-semibold underline underline-offset-2 hover:opacity-90">Watch the invitation</a>
-          <div className="flex items-center gap-4">
-            <a href="tel:8280342377" className="flex items-center gap-1.5 hover:underline"><Phone size={13} /> 8280342377</a>
-            <a href="tel:7077731257" className="hidden sm:flex items-center gap-1.5 hover:underline"><Phone size={13} /> 7077731257</a>
-          </div>
-        </div>
-      </div>
-
-      <header ref={headerRef} className="relative z-40 bg-[var(--ivory)]/95 backdrop-blur border-b border-[var(--line)]">
-        <div className="shell py-3 flex items-center justify-between gap-3">
-          <a href="#top" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5 min-w-0">
-            <span className="grid place-items-center w-10 h-10 rounded-full bg-[var(--gold-soft)] border border-[var(--gold)] text-xl shrink-0" aria-hidden="true">🪶</span>
-            <span className="leading-tight min-w-0">
-              <span className="block font-serif font-bold text-[17px] sm:text-xl tracking-tight truncate">Upanishad Gyanamrit</span>
-              <span className="block text-[10px] tracking-[0.18em] text-[var(--saffron)] font-bold">ROHTAK • 27 NOV – 10 DEC</span>
-            </span>
-          </a>
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn btn-primary shrink-0 !px-4 sm:!px-5 !text-sm hidden sm:inline-flex">Reserve Free Seat</a>
-            <button type="button" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-controls="site-menu" aria-label={menuOpen ? "Close menu" : "Open menu"} className="grid place-items-center w-11 h-11 rounded-full border-2 border-[var(--brown)] bg-[var(--cream)] text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)] focus-visible:ring-offset-2">
-              {menuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
-            </button>
-          </div>
-        </div>
-        {menuOpen && (
-          <nav id="site-menu" aria-label="Main menu" className="border-t-2 border-[var(--saffron)] bg-[var(--cream)] shadow-[0_18px_30px_rgba(74,20,5,.12)]">
-            <div className="shell py-3 flex flex-col gap-1">
-              <button onClick={() => { setMenuOpen(false); scrollTo("top"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">Home</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("why"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">Why Attend</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("core-message"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">Core Message</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("speaker"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">Speaker</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("schedule"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">14-Day Journey</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("venue"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">Venue / How to Reach</button>
-              <button onClick={() => { setMenuOpen(false); scrollTo("faq"); }} className="w-full text-left px-3 py-3 rounded-xl font-bold text-[var(--brown)] hover:bg-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)]">FAQ</button>
-              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" onClick={() => setMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 px-3 py-3 rounded-xl font-bold text-white bg-[var(--saffron)] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--saffron)] focus-visible:ring-offset-2">Reserve Your Seat <ArrowRight size={17} /></a>
-            </div>
-          </nav>
-        )}
-      </header>
-
       <main id="top">
         {/* 2 WATCH — product / invitation video */}
         <section id="watch" className="bg-[var(--cream)]">
