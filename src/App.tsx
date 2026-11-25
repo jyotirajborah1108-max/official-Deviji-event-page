@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Phone, MapPin, Clock, Heart, BookOpen, Sparkles, ArrowRight, Sun, Flame, Flower2, HelpCircle, ChevronDown } from "lucide-react";
 
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfmUEWST6BYDwi7VvSzpgliNR4fYBojN1o_jcfyRfjX4c-ssw/viewform?usp=publish-editor";
@@ -90,8 +90,6 @@ export default function App() {
     els.forEach((el, i) => { (el as HTMLElement).style.transitionDelay = `${Math.min((i % 3) * 80, 160)}ms`; obs.observe(el); });
     return () => obs.disconnect();
   }, []);
-
-  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div data-safe-area-inset-root style={{ boxSizing: "border-box", paddingTop: "var(--safe-area-inset-top)" }} className="min-h-screen bg-[var(--cream)] text-[var(--brown)] overflow-x-clip">
