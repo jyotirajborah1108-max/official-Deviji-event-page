@@ -39,9 +39,9 @@ const FAQS = [
   { q: "What should I bring?", a: "Just yourself, and arrive 30 minutes early. A notebook is helpful if you like to note the verses and reflections." },
 ];
 const WHY = [
-  { t: "Shruti", h: "What was heard", d: "What sages received in deep contemplation — not opinion, but direct seeing." },
-  { t: "Atma", h: "The Self within", d: "One question at the centre: who am I beneath changing thoughts and roles?" },
-  { t: "Moksha", h: "Freedom", d: "A freedom from fear and bondage that begins in this very life." },
+  { t: "Manushya Janma", h: "The rare birth", d: "Days 1–3. Why this human life is a one-in-a-thousand door: the Kathopanishad's call to 'wake up' (Uttishtha Jagrata), the two birds in the heart (jivatma and Paramatma), and life's real aim — infinite bliss (parmananda), not temporary relief." },
+  { t: "Sharanagati", h: "Surrender and the Guru", d: "Days 4–10. The intellect cannot grasp the infinite; love can. Dropping ego (ahanta–mamata), abandoning doership (kartapan), purifying the inner faculty (antahkaran shuddhi) — and why a realised Guru is the boat across." },
+  { t: "Prem-Bhakti", h: "Love over intellect", d: "Days 11–14. Karma Yoga in daily duties, devotion above ritual, Naam Sankirtan and Rupa Dhyana — ending where the series ends: from awe at God's majesty (aishvarya) to intimacy with His sweetness." },
 ];
 
 function Countdown() {
@@ -149,15 +149,16 @@ export default function App() {
         {/* 3 WHY UPANISHADS */}
         <section id="why" className="section">
           <div className="shell">
-            <div className="reveal"><Heading eyebrow="Why Upanishads" title="What are the Upanishads?" sub="They are the fragrance of the Vedas — dialogues between seekers and sages on the deepest questions of life." /></div>
+            <div className="reveal"><Heading eyebrow="Why Upanishads" title="What are the Upanishads?" sub="They are Brahm Vidya — the essence of the Vedas. Across 14 days at Janjgir, Raseshwari Devi Ji unfolds them as a living path: from the rare gift of human birth, through surrender to the Guru, to selfless love of Shri Krishna." /></div>
+            <p className="text-center text-sm text-[var(--brown-soft)] mt-4 max-w-3xl mx-auto">Upanishad Gyanamrit · 14 discourses · Janjgir, Chhattisgarh · 25 Sept – 8 Oct 2026 · in the lineage of Jagadguru Shri Kripalu Ji Maharaj</p>
             <div className="mt-8 grid md:grid-cols-3 gap-4 items-stretch">
               {WHY.map((c) => (
                 <article key={c.t} className="reveal card p-6 flex flex-col"><p className="font-serif text-4xl text-[var(--saffron)]">{c.t}</p><h3 className="mt-3 font-bold text-lg">{c.h}</h3><p className="body mt-2 !text-[16px]">{c.d}</p></article>
               ))}
             </div>
             <div className="reveal mt-4 card p-6 sm:p-7 flex flex-col md:flex-row md:items-center gap-5 justify-between">
-              <div><h3 className="font-serif text-2xl font-semibold">Who should attend?</h3><p className="body mt-1 !text-[16px]">First-time seekers, lifelong students, families, elders and young people — anyone longing for clarity, peace and devotion.</p></div>
-              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn bg-[var(--brown)] text-white shrink-0">Come for one evening</a>
+              <div><h3 className="font-serif text-2xl font-semibold">How to experience the 14 days</h3><p className="body mt-1 !text-[16px]">Begin at Day 1 and go in order — each discourse builds on the last, ending in a one-line essence (saar). Give each day one full listening, with chanting before and contemplation after.</p></div>
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn bg-[var(--brown)] text-white shrink-0">Begin with Day 1 →</a>
             </div>
           </div>
         </section>
