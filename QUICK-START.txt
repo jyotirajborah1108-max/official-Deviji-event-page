@@ -1,0 +1,112 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║          Upanishad Gyanamrit Website - Quick Start          ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ DEPENDENCIES INSTALLED
+   The node_modules folder is present, so npm install completed.
+
+📋 WHAT YOU NEED TO DO NOW:
+
+1️⃣  CONVERT IMAGES (10 minutes)
+   ----------------------------------
+   You need 3 WebP images in public\assets\:
+   
+   ├─ hero-banner.webp     (the Hindi poster with dates)
+   ├─ seated-stage.webp    (speaker on white stage)
+   └─ close-up.webp        (portrait with microphone)
+
+   Convert at: https://cloudconvert.com/jpg-to-webp
+   Set quality to 85%
+
+
+2️⃣  RUN THE SITE (1 minute)
+   ----------------------------------
+   Open PowerShell in this folder and run:
+   
+   npm run dev
+   
+   Opens automatically at: http://localhost:5173
+
+
+3️⃣  BUILD FOR PRODUCTION
+   ----------------------------------
+   When ready to deploy:
+   
+   npm run build
+   
+   Upload the 'dist' folder to your web host.
+
+
+📁 PROJECT STRUCTURE
+   ----------------------------------
+   ✅ index.html          - HTML template
+   ✅ package.json        - Dependencies list
+   ✅ src/
+      ├─ App.tsx          - Main React component
+      ├─ index.css        - Styles
+      └─ main.tsx         - Entry point
+   ✅ public/
+      └─ assets/          - Put WebP images here!
+
+
+⚠️  IMPORTANT NOTES
+   ----------------------------------
+   • Image filenames must match exactly:
+     - hero-banner.webp
+     - seated-stage.webp  
+     - close-up.webp
+   
+   • Place all 3 images in: public\assets\
+   
+   • After placing images, refresh browser if site is running
+
+
+🎯 WHAT'S INCLUDED
+   ----------------------------------
+   ✓ Countdown timer to Nov 27, 2026
+   ✓ 14-day interactive schedule
+   ✓ Speaker profile section
+   ✓ FAQ accordion
+   ✓ Mobile responsive design
+   ✓ Hindi Devanagari fonts
+   ✓ Contact & venue information
+   ✓ Google Form registration link
+
+
+📞 CONTACTS IN SITE
+   ----------------------------------
+   Phone: 8280342377, 7077731257
+   Website: raseshwarideviji.org
+   Form: Google registration form
+
+
+🚀 DEPLOYMENT OPTIONS
+   ----------------------------------
+   After 'npm run build', upload 'dist' folder to:
+   
+   • Netlify.com (drag & drop)
+   • Vercel.com
+   • GitHub Pages
+   • Any web hosting service
+
+
+📚 MORE HELP
+   ----------------------------------
+   See these files for detailed instructions:
+   
+   • SETUP-INSTRUCTIONS.md   - Full setup guide
+   • README.md               - Project overview  
+   • CHECKLIST.md            - Step-by-step tasks
+   • convert-images-to-webp.md - Image help
+
+
+═══════════════════════════════════════════════════════════════
+
+Need help? Check the documentation files above or search online
+for "Vite React getting started" for more information.
+
+Good luck with your event! 🪷
+
+═══════════════════════════════════════════════════════════════
