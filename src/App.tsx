@@ -251,22 +251,6 @@ export default function App() {
         <section aria-label="Countdown to Pravachan" className="relative overflow-hidden text-white" style={{ background: "linear-gradient(135deg,#0B1E4A 0%,#122A6B 58%,#0A1738 100%)" }}>
           <div className="absolute inset-0 blue-stars opacity-70" aria-hidden="true" />
           <div className="absolute right-[8%] top-[10%] w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#FFF3C4] moon" aria-hidden="true" />
-          
-          {/* Mor Pankh (Peacock Feather) - High Quality */}
-          <img 
-            src="assets/mor-pankh.svg" 
-            alt="Krishna's Peacock Feather" 
-            className="absolute left-[6%] top-[18%] w-20 h-32 sm:w-24 sm:h-36 rotate-[-18deg] opacity-90 drop-shadow-lg"
-            aria-hidden="true"
-          />
-
-          {/* Bansuri (Flute) - High Quality */}
-          <img 
-            src="assets/bansuri.svg" 
-            alt="Krishna's Bansuri Flute" 
-            className="absolute right-[10%] bottom-[24%] w-28 h-10 sm:w-32 sm:h-12 opacity-90 rotate-[-12deg] drop-shadow-lg"
-            aria-hidden="true"
-          />
 
           <div className="relative shell pt-14 sm:pt-16 pb-28 text-center">
             <div className="mt-9"><Countdown /></div>
