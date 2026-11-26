@@ -28,7 +28,7 @@ const LEARN = [
   { icon: Flame, title: "Bhokta–Bhogya–Prerita", text: "The enjoyer, the enjoyed, and the inspirer — three faces of one Brahman." },
   { icon: Heart, title: "This Human Birth", text: "Why discernment and freedom of action make this birth the doorway to God-realisation." },
   { icon: Sun, title: "Triguna to Pancha-Klesha", text: "Name the forces that bind us — gunas, karma, koshas, kleshas — so they loosen their hold." },
-  { icon: Flower2, title: "Listen–Contemplate–Receive", text: "Shravan, manan, and receiving — a simple practice for each evening and the days after." },
+  { icon: Flower2, title: "Listen–Contemplate–Receive", text: "Listen, contemplate, and receive — a simple practice for each evening and the days after." },
 ];
 const FAQS = [
   { q: "Is entry really free?", a: "Yes. Every evening at The Seven Knots Hall, Rohtak is free. Reserve a seat so the hall team can welcome you comfortably." },
