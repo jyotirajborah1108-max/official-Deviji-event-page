@@ -38,11 +38,6 @@ const FAQS = [
   { q: "Can I join in the middle of the series?", a: "Yes. Each evening stands on its own while building the 14-day journey. Come from any day, 27 Nov to 10 Dec." },
   { q: "What should I bring?", a: "Just yourself, and arrive 30 minutes early. A notebook is helpful if you like to note the verses and reflections." },
 ];
-const WHY = [
-  { t: "Manushya Janma", h: "The rare birth", d: "Days 1–3. Why this human life is a one-in-a-thousand door: the Kathopanishad's call to 'wake up' (Uttishtha Jagrata), the two birds in the heart (jivatma and Paramatma), and life's real aim — infinite bliss (parmananda), not temporary relief." },
-  { t: "Sharanagati", h: "Surrender and the Guru", d: "Days 4–10. The intellect cannot grasp the infinite; love can. Dropping ego (ahanta–mamata), abandoning doership (kartapan), purifying the inner faculty (antahkaran shuddhi) — and why a realised Guru is the boat across." },
-  { t: "Prem-Bhakti", h: "Love over intellect", d: "Days 11–14. Karma Yoga in daily duties, devotion above ritual, Naam Sankirtan and Rupa Dhyana — ending where the series ends: from awe at God's majesty (aishvarya) to intimacy with His sweetness." },
-];
 
 function Countdown() {
   const target = new Date("2026-11-27T18:00:00+05:30").getTime();
@@ -94,30 +89,6 @@ export default function App() {
   return (
     <div data-safe-area-inset-root style={{ boxSizing: "border-box", paddingTop: "var(--safe-area-inset-top)" }} className="min-h-screen bg-[var(--cream)] text-[var(--brown)] overflow-x-clip">
       <main id="top">
-        {/* 2 WATCH — product / invitation video */}
-        <section id="watch" className="bg-[var(--cream)]">
-          <div className="shell pt-4 pb-2">
-            <div className="card overflow-hidden grid md:grid-cols-[1.1fr_.9fr] items-center md:items-stretch !rounded-[16px]">
-              <div className="p-6 sm:p-7 flex flex-col justify-center self-center min-w-0">
-                <p className="eyebrow">Watch the invitation • Upanishad Gyanamrit • Rohtak</p>
-                <h2 className="font-serif text-2xl sm:text-3xl leading-tight font-semibold mt-3"><a href="https://www.youtube.com/watch?v=8bOYzlsuDWI" target="_blank" rel="noopener" className="hover:text-[var(--saffron)] underline decoration-[var(--gold)] underline-offset-4 [overflow-wrap:anywhere]">Upanishad Gyanamrit Rohtak | उपनिषद् ज्ञानामृत | Raseshwari Devi Ji</a></h2>
-                <p className="body mt-3">Drink the nectar of profound knowledge with Pujaniya Raseshwari Devi Ji in Rohtak — 27 Nov – 10 Dec 2026, 6–8 PM daily, The Seven Knots Hall, Rohtak.</p>
-                <p className="mt-2 text-sm font-bold">Organizer: Braj Gopika Seva Mission</p>
-              </div>
-              <div className="p-4 sm:p-6 flex items-center justify-center min-w-0 self-center md:self-stretch">
-                <iframe 
-                  className="w-full max-w-full overflow-hidden shadow-[0_18px_40px_rgba(74,20,5,.18)]" 
-                  style={{ aspectRatio: "16 / 9", borderRadius: "16px", border: "3px solid var(--gold)" }}
-                  src="https://www.youtube.com/embed/8bOYzlsuDWI" 
-                  title="Upanishad Gyanamrit Rohtak Invitation Video" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
-        </section>
         {/* 1 INVITATION — HERO, centred */}
         <section className="relative paisley-bg overflow-x-clip">
           <div className="shell relative pt-6 sm:pt-8 pb-12 text-center">
@@ -142,23 +113,6 @@ export default function App() {
               </div>
               <p className="mt-5 text-sm text-[var(--muted)]">Free entry &nbsp;•&nbsp; All are welcome &nbsp;•&nbsp; <a className="underline decoration-[var(--gold)] underline-offset-4 font-semibold text-[var(--brown)]" href="https://raseshwarideviji.org" target="_blank" rel="noopener">raseshwarideviji.org</a></p>
               <div className="sway mt-2 text-4xl" aria-hidden="true">🪷</div>
-            </div>
-          </div>
-        </section>
-
-        {/* 3 WHY UPANISHADS */}
-        <section id="why" className="section">
-          <div className="shell">
-            <div className="reveal"><Heading eyebrow="Why Upanishads" title="What are the Upanishads?" sub="They are Brahm Vidya — the essence of the Vedas. Across 14 days in Rohtak, Raseshwari Devi Ji unfolds them as a living path: from the rare gift of human birth, through surrender to the Guru, to selfless love of Shri Krishna." /></div>
-            <p className="text-center text-sm text-[var(--brown-soft)] mt-4 max-w-3xl mx-auto">Upanishad Gyanamrit · 14 discourses · Rohtak, Haryana · 27 Nov – 10 Dec 2026 · in the lineage of Jagadguru Shri Kripalu Ji Maharaj</p>
-            <div className="mt-8 grid md:grid-cols-3 gap-4 items-stretch">
-              {WHY.map((c) => (
-                <article key={c.t} className="reveal card p-6 flex flex-col"><p className="font-serif text-4xl text-[var(--saffron)]">{c.t}</p><h3 className="mt-3 font-bold text-lg">{c.h}</h3><p className="body mt-2 !text-[16px]">{c.d}</p></article>
-              ))}
-            </div>
-            <div className="reveal mt-4 card p-6 sm:p-7 flex flex-col md:flex-row md:items-center gap-5 justify-between">
-              <div><h3 className="font-serif text-2xl font-semibold">How to experience the 14 days</h3><p className="body mt-1 !text-[16px]">Begin at Day 1 and go in order — each discourse builds on the last, ending in a one-line essence (saar). Give each day one full listening, with chanting before and contemplation after.</p></div>
-              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn bg-[var(--brown)] text-white shrink-0">Begin with Day 1 →</a>
             </div>
           </div>
         </section>
@@ -386,6 +340,31 @@ export default function App() {
               <a href="tel:+918280342377" className="text-[#E8761A] font-semibold">8280342377</a>{" "}
               / <a href="tel:+917077731257" className="text-[#E8761A] font-semibold">7077731257</a>
             </p>
+          </div>
+        </section>
+
+        {/* 2 WATCH — product / invitation video */}
+        <section id="watch" className="section bg-[var(--cream)]">
+          <div className="shell">
+            <div className="card overflow-hidden grid md:grid-cols-[1.1fr_.9fr] items-center md:items-stretch !rounded-[16px]">
+              <div className="p-6 sm:p-7 flex flex-col justify-center self-center min-w-0">
+                <p className="eyebrow">Watch the invitation • Upanishad Gyanamrit • Rohtak</p>
+                <h2 className="font-serif text-2xl sm:text-3xl leading-tight font-semibold mt-3"><a href="https://www.youtube.com/watch?v=8bOYzlsuDWI" target="_blank" rel="noopener" className="hover:text-[var(--saffron)] underline decoration-[var(--gold)] underline-offset-4 [overflow-wrap:anywhere]">Upanishad Gyanamrit Rohtak | उपनिषद् ज्ञानामृत | Raseshwari Devi Ji</a></h2>
+                <p className="body mt-3">Drink the nectar of profound knowledge with Pujaniya Raseshwari Devi Ji in Rohtak — 27 Nov – 10 Dec 2026, 6–8 PM daily, The Seven Knots Hall, Rohtak.</p>
+                <p className="mt-2 text-sm font-bold">Organizer: Braj Gopika Seva Mission</p>
+              </div>
+              <div className="p-4 sm:p-6 flex items-center justify-center min-w-0 self-center md:self-stretch">
+                <iframe 
+                  className="w-full max-w-full overflow-hidden shadow-[0_18px_40px_rgba(74,20,5,.18)]" 
+                  style={{ aspectRatio: "16 / 9", borderRadius: "16px", border: "3px solid var(--gold)" }}
+                  src="https://www.youtube.com/embed/8bOYzlsuDWI" 
+                  title="Upanishad Gyanamrit Rohtak Invitation Video" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </section>
 
