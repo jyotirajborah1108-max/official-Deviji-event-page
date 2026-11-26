@@ -97,8 +97,6 @@ export default function App() {
             </figure>
             <div className="hero-glow left-1/2 -translate-x-1/2 top-2" aria-hidden="true" />
             <div className="relative hero-in max-w-3xl mx-auto mt-8">
-              <p className="eyebrow">Braj Gopika Seva Mission presents</p>
-              <p className="mt-2 text-[12px] font-bold tracking-[0.18em] text-[var(--brown-soft)]">ORGANIZER: BRAJ GOPIKA SEVA MISSION</p>
               <h1 className="font-serif mt-4 text-[clamp(3rem,8vw,5.6rem)] leading-[0.95] font-semibold">Drink the Nectar<br /><span className="italic text-[var(--saffron)]">of the Upanishads</span></h1>
               <p className="mt-4 text-xl sm:text-2xl font-semibold">Upanishad Gyanamrit — <span className="font-dev">उपनिषद् ज्ञानामृत</span></p>
               <p className="body mt-5 mx-auto max-w-2xl">Fourteen evenings with Pujaniya Raseshwari Devi Ji in Rohtak. Sit with the Upanishads — slowly, simply, in the company of devotion. Come as you are. Leave a little lighter.</p>
@@ -170,7 +168,6 @@ export default function App() {
             </figure>
             <div className="reveal">
               <Heading eyebrow="The Speaker" title="H.H. Raseshwari Devi Ji" hindi="परम पूज्य रासेश्वरी देवी जी" sub="Foremost preacher of Jagadguru Shri Kripalu Ji Maharaj. She has presented the complete philosophy of Sanatan Vedic Dharma that dispels doubts about Sanatan Dharma. Honoured with the Adarsh Yuva Adhyatmik Guru award by MIT WPU, Pune." />
-              <p className="mt-4 text-sm font-bold">Organizer: Braj Gopika Seva Mission</p>
               <div className="mt-5 flex flex-wrap gap-2">{["Upanishad Katha", "Shri Krishna Bhakti", "Sanatan Vedic Wisdom"].map((t) => <span key={t} className="pill">{t}</span>)}</div>
               <div className="mt-6 card p-5"><p className="text-xs tracking-widest font-bold text-[var(--saffron)]">SAYINGS OF THE SOUL</p><p className="font-serif text-xl sm:text-2xl leading-snug mt-2">"When the heart turns toward Shyam, even ordinary days begin to shine."</p></div>
               <a href="https://raseshwarideviji.org" target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--saffron)]">Learn more at raseshwarideviji.org <ArrowRight size={17} /></a>
@@ -351,7 +348,6 @@ export default function App() {
                 <p className="eyebrow">Watch the invitation • Upanishad Gyanamrit • Rohtak</p>
                 <h2 className="font-serif text-2xl sm:text-3xl leading-tight font-semibold mt-3"><a href="https://www.youtube.com/watch?v=8bOYzlsuDWI" target="_blank" rel="noopener" className="hover:text-[var(--saffron)] underline decoration-[var(--gold)] underline-offset-4 [overflow-wrap:anywhere]">Upanishad Gyanamrit Rohtak | उपनिषद् ज्ञानामृत | Raseshwari Devi Ji</a></h2>
                 <p className="body mt-3">Drink the nectar of profound knowledge with Pujaniya Raseshwari Devi Ji in Rohtak — 27 Nov – 10 Dec 2026, 6–8 PM daily, The Seven Knots Hall, Rohtak.</p>
-                <p className="mt-2 text-sm font-bold">Organizer: Braj Gopika Seva Mission</p>
               </div>
               <div className="p-4 sm:p-6 flex items-center justify-center min-w-0 self-center md:self-stretch">
                 <iframe 
@@ -385,7 +381,7 @@ export default function App() {
         <section id="register" className="relative overflow-hidden" style={{ background: "linear-gradient(135deg,#FFF1D6,#FFD9A8 55%,#FFB86B)" }}>
           <div className="shell py-14 sm:py-20">
             <div className="reveal mx-auto max-w-2xl text-center">
-              <p className="text-xs font-extrabold tracking-[0.26em] text-[#8A2A00]">FREE ENTRY • ROHTAK • ORGANIZER: BRAJ GOPIKA SEVA MISSION</p>
+              <p className="text-xs font-extrabold tracking-[0.26em] text-[#8A2A00]">FREE ENTRY • ROHTAK</p>
               <h2 className="font-serif text-4xl sm:text-6xl leading-[1.02] mt-3">Reserve a Free Seat</h2>
               <p className="body mt-4 !text-[#6D2C0B]">Free entry • 27th Nov to 10th Dec, 2026 • 6 PM to 8 PM • The Seven Knots Hall, Rohtak</p>
               <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn btn-primary mt-7 w-full sm:w-auto min-w-0 [white-space:normal] h-auto min-h-[48px] py-3 text-center">Reserve Your Seat →</a>
