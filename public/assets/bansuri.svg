@@ -1,0 +1,107 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Bamboo wood gradient -->
+    <linearGradient id="bambooGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="20%" stop-color="#92400E"/>
+      <stop offset="40%" stop-color="#B45309"/>
+      <stop offset="60%" stop-color="#D97706"/>
+      <stop offset="80%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    
+    <!-- Wood grain detail -->
+    <linearGradient id="grainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451A03" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#78350F" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#451A03" stop-opacity="0.3"/>
+    </linearGradient>
+    
+    <!-- Highlight gradient -->
+    <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FBBF24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+    </linearGradient>
+    
+    <!-- Hole shadow -->
+    <radialGradient id="holeShadow">
+      <stop offset="0%" stop-color="#1C0A00"/>
+      <stop offset="60%" stop-color="#3C1810"/>
+      <stop offset="100%" stop-color="#6B2810" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main flute body -->
+  <rect x="20" y="25" width="260" height="30" rx="15" fill="url(#bambooGrad)"/>
+  
+  <!-- Wood grain overlay -->
+  <rect x="20" y="25" width="260" height="30" rx="15" fill="url(#grainGrad)" opacity="0.4"/>
+  
+  <!-- Top highlight (bamboo shine) -->
+  <ellipse cx="150" cy="30" rx="120" ry="4" fill="url(#highlightGrad)" opacity="0.5"/>
+  
+  <!-- Bamboo binding rings (dark wraps) -->
+  <rect x="30" y="23" width="4" height="34" rx="2" fill="#451A03" opacity="0.9"/>
+  <rect x="50" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="70" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="90" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="110" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="130" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="150" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="170" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="190" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="210" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="230" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="250" y="23" width="3" height="34" rx="1.5" fill="#451A03" opacity="0.85"/>
+  <rect x="270" y="23" width="4" height="34" rx="2" fill="#451A03" opacity="0.9"/>
+  
+  <!-- Finger holes with depth -->
+  <g id="holes">
+    <!-- Hole 1 -->
+    <circle cx="75" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="75" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="74" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 2 -->
+    <circle cx="100" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="100" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="99" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 3 -->
+    <circle cx="125" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="125" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="124" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 4 -->
+    <circle cx="150" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="150" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="149" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 5 -->
+    <circle cx="175" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="175" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="174" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 6 -->
+    <circle cx="200" cy="40" r="6" fill="url(#holeShadow)"/>
+    <circle cx="200" cy="40" r="5" fill="#1C0A00"/>
+    <circle cx="199" cy="39" r="1.5" fill="#000000" opacity="0.3"/>
+    
+    <!-- Hole 7 (smaller, end hole) -->
+    <circle cx="225" cy="40" r="5" fill="url(#holeShadow)"/>
+    <circle cx="225" cy="40" r="4" fill="#1C0A00"/>
+    <circle cx="224" cy="39" r="1" fill="#000000" opacity="0.3"/>
+  </g>
+  
+  <!-- Mouthpiece end cap (golden) -->
+  <ellipse cx="35" cy="40" rx="10" ry="12" fill="#F59E0B" opacity="0.4"/>
+  <ellipse cx="35" cy="40" rx="7" ry="9" fill="#FBBF24" opacity="0.5"/>
+  <ellipse cx="33" cy="38" rx="3" ry="4" fill="#FDE047" opacity="0.6"/>
+  
+  <!-- End cap detail -->
+  <ellipse cx="275" cy="40" rx="8" ry="10" fill="#78350F" opacity="0.6"/>
+  
+  <!-- Bottom shadow for depth -->
+  <ellipse cx="150" cy="52" rx="120" ry="2" fill="#000000" opacity="0.15"/>
+</svg>

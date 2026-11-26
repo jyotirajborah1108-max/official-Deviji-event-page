@@ -1,0 +1,82 @@
+<svg width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Eye gradient - vivid Krishna peacock colors -->
+    <radialGradient id="eyeCenter" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#1E3A8A" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#3B82F6" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#10B981" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#F59E0B" stop-opacity="1"/>
+    </radialGradient>
+    
+    <radialGradient id="eyeOuter" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#047857" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#065F46" stop-opacity="0.6"/>
+    </radialGradient>
+    
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="50%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+    
+    <!-- Feather barb gradient -->
+    <linearGradient id="barbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#059669" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main stem -->
+  <path d="M100 280 Q98 200 100 120 Q102 40 100 20" 
+        stroke="url(#stemGrad)" 
+        stroke-width="5" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Lower barbs - darker green-teal -->
+  <g opacity="0.7">
+    <path d="M100 200 Q70 210 50 225 Q65 215 100 205" fill="#064E3B" opacity="0.5"/>
+    <path d="M100 200 Q130 210 150 225 Q135 215 100 205" fill="#064E3B" opacity="0.5"/>
+    <path d="M100 180 Q65 192 42 210 Q58 198 100 185" fill="#065F46" opacity="0.6"/>
+    <path d="M100 180 Q135 192 158 210 Q142 198 100 185" fill="#065F46" opacity="0.6"/>
+  </g>
+  
+  <!-- Middle barbs - emerald green -->
+  <g opacity="0.8">
+    <path d="M100 160 Q60 172 35 195 Q52 180 100 165" fill="#047857" opacity="0.7"/>
+    <path d="M100 160 Q140 172 165 195 Q148 180 100 165" fill="#047857" opacity="0.7"/>
+    <path d="M100 140 Q55 155 28 182 Q48 165 100 145" fill="#059669" opacity="0.75"/>
+    <path d="M100 140 Q145 155 172 182 Q152 165 100 145" fill="#059669" opacity="0.75"/>
+    <path d="M100 120 Q50 138 20 170 Q42 150 100 125" fill="#10B981" opacity="0.8"/>
+    <path d="M100 120 Q150 138 180 170 Q158 150 100 125" fill="#10B981" opacity="0.8"/>
+  </g>
+  
+  <!-- Upper decorative barbs - lighter, more delicate -->
+  <g opacity="0.85">
+    <path d="M100 100 Q45 120 15 158 Q38 135 100 105" fill="#34D399" opacity="0.65"/>
+    <path d="M100 100 Q155 120 185 158 Q162 135 100 105" fill="#34D399" opacity="0.65"/>
+    <path d="M100 85 Q42 108 10 148 Q35 122 100 90" fill="#6EE7B7" opacity="0.5"/>
+    <path d="M100 85 Q158 108 190 148 Q165 122 100 90" fill="#6EE7B7" opacity="0.5"/>
+  </g>
+  
+  <!-- Eye of the feather - layered for depth -->
+  <ellipse cx="100" cy="50" rx="45" ry="52" fill="url(#eyeOuter)"/>
+  <ellipse cx="100" cy="50" rx="38" ry="45" fill="#B45309" opacity="0.9"/>
+  <ellipse cx="100" cy="50" rx="30" ry="36" fill="url(#eyeCenter)"/>
+  <ellipse cx="100" cy="50" rx="18" ry="22" fill="#1E3A8A"/>
+  <ellipse cx="100" cy="50" rx="10" ry="12" fill="#3B82F6"/>
+  
+  <!-- Eye highlights for sparkle -->
+  <ellipse cx="105" cy="45" rx="4" ry="5" fill="#93C5FD" opacity="0.9"/>
+  <ellipse cx="108" cy="42" rx="2" ry="2.5" fill="#DBEAFE" opacity="0.95"/>
+  
+  <!-- Golden outer ring -->
+  <ellipse cx="100" cy="50" rx="45" ry="52" 
+           fill="none" 
+           stroke="#F59E0B" 
+           stroke-width="2" 
+           opacity="0.6"/>
+</svg>
