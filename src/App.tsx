@@ -321,10 +321,7 @@ export default function App() {
                           DAY {selectedJourney.day} — {selectedJourney.date.toUpperCase()} • PHASE {selectedJourney.phase} — {phase.name.toUpperCase()}
                         </p>
                         <p className="mt-2 text-[#4A2310]">{phase.desc}</p>
-                        <a href={GOOGLE_FORM_URL} target="_blank" rel="noreferrer" className="inline-block mt-3 bg-[#E8761A] text-white px-5 py-2.5 rounded-full">
-                          Reserve for Phase {selectedJourney.phase} →
-                        </a>
-                        <p className="text-xs mt-2 text-neutral-500">All days are free • Arrive 30 minutes early</p>
+                        <p className="text-xs mt-3 text-neutral-500">All days are free • Arrive 30 minutes early</p>
                       </div>
                     </div>
                   </>
