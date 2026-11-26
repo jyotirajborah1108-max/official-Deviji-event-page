@@ -251,8 +251,65 @@ export default function App() {
         <section aria-label="Countdown to Pravachan" className="relative overflow-hidden text-white" style={{ background: "linear-gradient(135deg,#0B1E4A 0%,#122A6B 58%,#0A1738 100%)" }}>
           <div className="absolute inset-0 blue-stars opacity-70" aria-hidden="true" />
           <div className="absolute right-[8%] top-[10%] w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#FFF3C4] moon" aria-hidden="true" />
-          <div className="absolute left-[6%] top-[24%] text-5xl sm:text-7xl rotate-[-18deg] opacity-90 feather" aria-hidden="true">🪶</div>
-          <div className="absolute right-[10%] bottom-[24%] text-4xl opacity-80 feather" aria-hidden="true">🪈</div>
+          
+          {/* Mor Pankh (Peacock Feather) */}
+          <svg className="absolute left-[6%] top-[20%] w-16 h-24 sm:w-20 sm:h-32 rotate-[-18deg] opacity-90" aria-hidden="true" viewBox="0 0 100 150">
+            <defs>
+              <radialGradient id="eyeGrad" cx="50%" cy="50%">
+                <stop offset="0%" stopColor="#4169E1" />
+                <stop offset="40%" stopColor="#228B22" />
+                <stop offset="70%" stopColor="#DAA520" />
+                <stop offset="100%" stopColor="#8B4513" />
+              </radialGradient>
+            </defs>
+            {/* Feather stem */}
+            <path d="M50 140 Q48 100 50 60 Q52 20 50 10" stroke="#8B4513" strokeWidth="2" fill="none" />
+            {/* Feather barbs */}
+            <path d="M50 60 Q35 65 25 70 Q30 68 50 65" fill="#2F4F4F" opacity="0.6" />
+            <path d="M50 60 Q65 65 75 70 Q70 68 50 65" fill="#2F4F4F" opacity="0.6" />
+            <path d="M50 50 Q30 55 20 62 Q25 58 50 55" fill="#3D5C5C" opacity="0.6" />
+            <path d="M50 50 Q70 55 80 62 Q75 58 50 55" fill="#3D5C5C" opacity="0.6" />
+            <path d="M50 40 Q28 45 18 54 Q23 48 50 45" fill="#4A6B6B" opacity="0.6" />
+            <path d="M50 40 Q72 45 82 54 Q77 48 50 45" fill="#4A6B6B" opacity="0.6" />
+            {/* Eye of the feather */}
+            <ellipse cx="50" cy="25" rx="18" ry="22" fill="url(#eyeGrad)" />
+            <ellipse cx="50" cy="25" rx="10" ry="12" fill="#000080" />
+            <ellipse cx="50" cy="25" rx="5" ry="6" fill="#4169E1" />
+            <ellipse cx="52" cy="23" rx="2" ry="2.5" fill="#87CEEB" />
+          </svg>
+
+          {/* Bansuri (Flute) */}
+          <svg className="absolute right-[10%] bottom-[24%] w-20 h-6 sm:w-24 sm:h-7 opacity-90 rotate-[-12deg]" aria-hidden="true" viewBox="0 0 120 30">
+            <defs>
+              <linearGradient id="fluteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#D2691E" />
+                <stop offset="50%" stopColor="#CD853F" />
+                <stop offset="100%" stopColor="#8B4513" />
+              </linearGradient>
+            </defs>
+            {/* Flute body */}
+            <rect x="5" y="10" width="110" height="10" rx="5" fill="url(#fluteGrad)" />
+            {/* Flute rings/bindings */}
+            <rect x="8" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="20" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="32" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="44" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="56" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="68" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="80" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="92" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            <rect x="104" y="9" width="2" height="12" fill="#654321" opacity="0.8" />
+            {/* Holes */}
+            <circle cx="28" cy="15" r="2.5" fill="#2C1810" />
+            <circle cx="40" cy="15" r="2.5" fill="#2C1810" />
+            <circle cx="52" cy="15" r="2.5" fill="#2C1810" />
+            <circle cx="64" cy="15" r="2.5" fill="#2C1810" />
+            <circle cx="76" cy="15" r="2.5" fill="#2C1810" />
+            <circle cx="88" cy="15" r="2.5" fill="#2C1810" />
+            {/* End cap highlight */}
+            <ellipse cx="12" cy="15" rx="4" ry="3" fill="#FFD700" opacity="0.3" />
+          </svg>
+
           <div className="relative shell pt-14 sm:pt-16 pb-28 text-center">
             <div className="mt-9"><Countdown /></div>
           </div>
