@@ -40,28 +40,108 @@ const FAQS = [
 ];
 
 function Countdown() {
-  const target = new Date("2026-11-27T18:00:00+05:30").getTime();
+  const programStart = new Date("2026-11-27T18:00:00+05:30").getTime();
+  const programEnd = new Date("2026-12-10T20:00:00+05:30").getTime();
   const [now, setNow] = useState(() => Date.now());
   useEffect(() => { const t = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(t); }, []);
-  const diff = Math.max(0, target - now);
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  const items = [{ v: d, l: "Days" }, { v: h, l: "Hours" }, { v: m, l: "Minutes" }, { v: s, l: "Seconds" }];
-  return (
-    <div>
-      <div className="grid grid-cols-4 gap-2 sm:gap-3 max-w-2xl mx-auto min-h-[92px] sm:min-h-[118px]">
-        {items.map((it) => (
-          <div key={it.l} className="rounded-2xl border border-white/25 bg-white/10 px-2 py-4 sm:py-6 text-center backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,.25)] flex flex-col justify-center">
-            <div key={it.v} className="tick font-serif text-3xl sm:text-5xl font-semibold text-white tabular-nums">{String(it.v).padStart(2, "0")}</div>
-            <div className="mt-1 text-[10px] sm:text-xs tracking-[0.22em] uppercase text-amber-200">{it.l}</div>
-          </div>
-        ))}
+
+  // Before program starts: countdown to Day 1
+  if (now < programStart) {
+    const diff = programStart - now;
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const items = [{ v: d, l: "Days" }, { v: h, l: "Hours" }, { v: m, l: "Minutes" }, { v: s, l: "Seconds" }];
+    return (
+      <div>
+        <div className="grid grid-cols-4 gap-2 sm:gap-3 max-w-2xl mx-auto min-h-[92px] sm:min-h-[118px]">
+          {items.map((it) => (
+            <div key={it.l} className="rounded-2xl border border-white/25 bg-white/10 px-2 py-4 sm:py-6 text-center backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,.25)] flex flex-col justify-center">
+              <div key={it.v} className="tick font-serif text-3xl sm:text-5xl font-semibold text-white tabular-nums">{String(it.v).padStart(2, "0")}</div>
+              <div className="mt-1 text-[10px] sm:text-xs tracking-[0.22em] uppercase text-amber-200">{it.l}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-5 text-sm sm:text-base text-amber-100 font-semibold">Starts in {d} {d === 1 ? "day" : "days"} — 27 Nov 2026, 6 PM IST</p>
       </div>
-      <p className="mt-5 text-sm sm:text-base text-amber-100 font-semibold">{diff > 0 ? `Starts in ${d} ${d === 1 ? "day" : "days"} — 27 Nov 2026, 6 PM IST` : "The series has begun — join us at 6 PM in Rohtak"}</p>
-    </div>
-  );
+    );
+  }
+
+  // After program ends
+  if (now > programEnd) {
+    return (
+      <div>
+        <p className="text-2xl sm:text-3xl font-serif text-white font-semibold">The 14-day Pravachan has concluded</p>
+        <p className="mt-3 text-amber-100">Thank you for being part of this sacred journey</p>
+      </div>
+    );
+  }
+
+  // During program: calculate which day and countdown to today's session
+  const daysSinceStart = Math.floor((now - programStart) / 86400000);
+  const currentDay = Math.min(daysSinceStart + 1, 14);
+  
+  // Calculate today's session time (6 PM on the current day)
+  const todaySessionDate = new Date(programStart);
+  todaySessionDate.setDate(todaySessionDate.getDate() + daysSinceStart);
+  const todaySession = todaySessionDate.getTime();
+  const todaySessionEnd = todaySession + (2 * 3600000); // 6 PM + 2 hours = 8 PM base time
+
+  // Check if we're currently live (between 6 PM and 9 PM, allowing 1 hour extension)
+  const isLive = now >= todaySession && now < (todaySessionEnd + 3600000);
+
+  if (isLive) {
+    return (
+      <div>
+        <div className="rounded-2xl border border-red-400/50 bg-red-500/20 px-6 py-8 text-center backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,.25)] animate-pulse">
+          <div className="text-5xl sm:text-7xl font-serif font-bold text-white flex items-center justify-center gap-3">
+            <span className="inline-block w-4 h-4 bg-red-500 rounded-full animate-pulse"></span>
+            LIVE NOW
+          </div>
+          <p className="mt-4 text-xl text-amber-100 font-semibold">Day {currentDay} of the Pravachan</p>
+        </div>
+        <p className="mt-5 text-sm text-amber-200/80 italic">Sessions may extend 30 minutes to 1 hour beyond scheduled time</p>
+      </div>
+    );
+  }
+
+  // Not live yet today: countdown to today's 6 PM session
+  const diff = todaySession - now;
+  if (diff > 0) {
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const items = [{ v: h, l: "Hours" }, { v: m, l: "Minutes" }, { v: s, l: "Seconds" }];
+    return (
+      <div>
+        <p className="text-2xl sm:text-3xl font-serif text-white font-semibold mb-4">Day {currentDay} of the Pravachan</p>
+        <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-xl mx-auto min-h-[92px] sm:min-h-[118px]">
+          {items.map((it) => (
+            <div key={it.l} className="rounded-2xl border border-white/25 bg-white/10 px-2 py-4 sm:py-6 text-center backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,.25)] flex flex-col justify-center">
+              <div key={it.v} className="tick font-serif text-3xl sm:text-5xl font-semibold text-white tabular-nums">{String(it.v).padStart(2, "0")}</div>
+              <div className="mt-1 text-[10px] sm:text-xs tracking-[0.22em] uppercase text-amber-200">{it.l}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-5 text-sm sm:text-base text-amber-100 font-semibold">Today's session starts at 6:00 PM IST</p>
+        <p className="mt-2 text-xs text-amber-200/80 italic">Sessions may extend 30 minutes to 1 hour beyond scheduled time</p>
+      </div>
+    );
+  }
+
+  // Session has ended for today, show message for tomorrow
+  const nextDay = currentDay + 1;
+  if (nextDay <= 14) {
+    return (
+      <div>
+        <p className="text-2xl sm:text-3xl font-serif text-white font-semibold">Today's session (Day {currentDay}) has concluded</p>
+        <p className="mt-3 text-amber-100">Join us tomorrow for Day {nextDay} at 6:00 PM IST</p>
+      </div>
+    );
+  }
+
+  return null;
 }
 
 function Heading({ eyebrow, title, hindi, sub, center }: { eyebrow: string; title: string; hindi?: string; sub?: string; center?: boolean }) {
@@ -168,17 +248,13 @@ export default function App() {
         </section>
 
         {/* BLUE SHYAM — countdown */}
-        <section aria-label="Shyam — the Krishna moment" className="relative overflow-hidden text-white" style={{ background: "linear-gradient(135deg,#0B1E4A 0%,#122A6B 58%,#0A1738 100%)" }}>
+        <section aria-label="Countdown to Pravachan" className="relative overflow-hidden text-white" style={{ background: "linear-gradient(135deg,#0B1E4A 0%,#122A6B 58%,#0A1738 100%)" }}>
           <div className="absolute inset-0 blue-stars opacity-70" aria-hidden="true" />
           <div className="absolute right-[8%] top-[10%] w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#FFF3C4] moon" aria-hidden="true" />
           <div className="absolute left-[6%] top-[24%] text-5xl sm:text-7xl rotate-[-18deg] opacity-90 feather" aria-hidden="true">🪶</div>
           <div className="absolute right-[10%] bottom-[24%] text-4xl opacity-80 feather" aria-hidden="true">🪈</div>
           <div className="relative shell pt-14 sm:pt-16 pb-28 text-center">
-            <p className="text-[12px] tracking-[0.32em] text-amber-300 font-bold">SHYAM — THE KRISHNA MOMENT</p>
-            <h2 className="font-serif text-4xl sm:text-6xl mt-4 leading-[1.03]">Why Blue?<br /><span className="italic text-amber-200">Because Krishna is Shyam.</span></h2>
-            <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-blue-100/90">Neel is not a corporate colour here. It is the colour of the evening sky, of the Yamuna at dusk, of Shyam himself — deep, quiet and infinite. This one blue passage is a pause: a moment to breathe before wisdom begins.</p>
             <div className="mt-9"><Countdown /></div>
-            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn btn-primary mt-6 max-w-full [white-space:normal] h-auto min-h-[48px] py-3 text-center"><span className="sm:hidden">Reserve Your Seat</span><span className="hidden sm:inline">Reserve your seat in Shyam's gathering</span></a>
           </div>
           <div className="wave-drift absolute bottom-0 left-[-2%] w-[104%]">
             <svg className="block w-full h-[64px] sm:h-[86px] text-[#FFF8EC]" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0,55 C180,15 300,85 480,55 C660,25 780,80 960,50 C1140,20 1290,70 1440,40 L1440,90 L0,90 Z" /><path fill="#F2A007" opacity=".28" d="M0,70 C220,35 420,88 680,62 C940,36 1180,82 1440,58 L1440,90 L0,90 Z" /></svg>
