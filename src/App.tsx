@@ -195,11 +195,6 @@ export default function App() {
               <div className="reveal">
                 <h3 className="font-serif text-3xl leading-tight font-semibold">The crown jewel of Vedic wisdom</h3>
                 <p className="body mt-4">The Upanishads are the essence of the four Vedas — a life manual for humanity. Not sectarian, but universal: clarity about the Self, the World, and God.</p>
-                <div className="mt-6 grid sm:grid-cols-3 gap-4">
-                  <div className="card p-5"><span className="font-serif text-4xl text-[var(--saffron)]">1</span><h4 className="font-bold mt-2">Crown jewel</h4><p className="text-sm leading-relaxed text-[var(--brown-soft)] mt-1">The essence of the four Vedas, in plain language.</p></div>
-                  <div className="card p-5"><span className="font-serif text-4xl text-[var(--saffron)]">2</span><h4 className="font-bold mt-2">Universal</h4><p className="text-sm leading-relaxed text-[var(--brown-soft)] mt-1">For every seeker — Self, World, and God.</p></div>
-                  <div className="card p-5"><span className="font-serif text-4xl text-[var(--saffron)]">3</span><h4 className="font-bold mt-2">Dispels doubt</h4><p className="text-sm leading-relaxed text-[var(--brown-soft)] mt-1">The complete philosophy of Sanatan Vedic Dharma.</p></div>
-                </div>
                 <div className="mt-6 rounded-[16px] bg-[var(--brown)] text-[#FFF8EC] p-6 sm:p-7">
                   <p className="text-[12px] font-bold tracking-[0.24em] text-[var(--gold)]">THE OPENING VERSE • SHVETASHVATARA UPANISHAD 1.12</p>
                   <blockquote className="font-dev mt-4 text-xl sm:text-2xl leading-relaxed">एतज्ज्ञेयं नित्यमेवात्मसंस्थं नातः परं वेदितव्यं हि किंचित् । भोक्ता भोग्यं प्रेरितारं च मत्वा सर्वं प्रोक्तं त्रिविधं ब्रह्ममेतत् ॥</blockquote>
