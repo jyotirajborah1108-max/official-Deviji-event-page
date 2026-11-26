@@ -181,7 +181,7 @@ export default function App() {
                 <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn btn-primary">Reserve Free Seat <ArrowRight size={18} /></a>
                 <a href="tel:8280342377" className="btn btn-outline"><Phone size={17} /> Call Now</a>
               </div>
-              <p className="mt-5 text-sm text-[var(--muted)]">Free entry &nbsp;•&nbsp; All are welcome &nbsp;•&nbsp; <a className="underline decoration-[var(--gold)] underline-offset-4 font-semibold text-[var(--brown)]" href="https://raseshwarideviji.org" target="_blank" rel="noopener">raseshwarideviji.org</a></p>
+              <p className="mt-5 text-sm text-[var(--muted)]">Free entry &nbsp;•&nbsp; All are welcome &nbsp;•&nbsp; <a className="underline decoration-[var(--gold)] underline-offset-4 font-semibold text-[var(--brown)]" href="https://www.raseshwarideviji.org/about" target="_blank" rel="noopener">raseshwarideviji.org</a></p>
               <div className="sway mt-2 text-4xl" aria-hidden="true">🪷</div>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function App() {
               <Heading eyebrow="The Speaker" title="H.H. Raseshwari Devi Ji" hindi="परम पूज्य रासेश्वरी देवी जी" sub="Foremost preacher of Jagadguru Shri Kripalu Ji Maharaj. She has presented the complete philosophy of Sanatan Vedic Dharma that dispels doubts about Sanatan Dharma. Honoured with the Adarsh Yuva Adhyatmik Guru award by MIT WPU, Pune." />
               <div className="mt-5 flex flex-wrap gap-2">{["Upanishad Katha", "Shri Krishna Bhakti", "Sanatan Vedic Wisdom"].map((t) => <span key={t} className="pill">{t}</span>)}</div>
               <div className="mt-6 card p-5"><p className="text-xs tracking-widest font-bold text-[var(--saffron)]">SAYINGS OF THE SOUL</p><p className="font-serif text-xl sm:text-2xl leading-snug mt-2">"When the heart turns toward Shyam, even ordinary days begin to shine."</p></div>
-              <a href="https://raseshwarideviji.org" target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--saffron)]">Learn more at raseshwarideviji.org <ArrowRight size={17} /></a>
+              <a href="https://www.raseshwarideviji.org/about" target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--saffron)]">Learn more at raseshwarideviji.org <ArrowRight size={17} /></a>
             </div>
           </div>
         </section>
