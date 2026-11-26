@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone, MapPin, Clock, Heart, BookOpen, Sparkles, ArrowRight, Sun, Flame, Flower2, HelpCircle, ChevronDown } from "lucide-react";
+import { Phone, Heart, BookOpen, Sparkles, ArrowRight, Sun, Flame, Flower2, HelpCircle, ChevronDown } from "lucide-react";
 
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfmUEWST6BYDwi7VvSzpgliNR4fYBojN1o_jcfyRfjX4c-ssw/viewform?usp=publish-editor";
 
@@ -261,20 +261,6 @@ export default function App() {
                 );
               })()}
             </div>
-          </div>
-        </section>
-
-        {/* 8 VENUE */}
-        <section id="venue" className="section bg-[var(--ivory)] border-y border-[var(--line)]">
-          <div className="shell">
-            <div className="reveal"><Heading eyebrow="Venue" title="The Seven Knots Hall, Rohtak" sub="A welcoming hall for families, elders and first-time visitors. Arrive 30 minutes early to settle in." /></div>
-            <div className="mt-8 grid sm:grid-cols-2 gap-4 items-stretch">
-              <div className="reveal card p-5 flex gap-3 items-start"><MapPin className="text-[var(--saffron)] shrink-0 mt-0.5" /><div><b>The Seven Knots Hall</b><p className="text-sm text-[var(--brown-soft)] mt-1">Rohtak • Free entry • Family welcome</p></div></div>
-              <div className="reveal card p-5 flex gap-3 items-start"><Clock className="text-[var(--saffron)] shrink-0 mt-0.5" /><div><b>Daily • 6:00 PM – 8:00 PM</b><p className="font-dev text-sm text-[var(--brown-soft)] mt-1">प्रतिदिन शाम 6 बजे से 8 बजे तक</p></div></div>
-              <a href="tel:8280342377" className="reveal card p-5"><span className="text-xs font-bold text-[var(--muted)]">CALL</span><span className="block font-bold mt-1 text-lg">8280342377</span></a>
-              <a href="tel:7077731257" className="reveal card p-5"><span className="text-xs font-bold text-[var(--muted)]">CALL</span><span className="block font-bold mt-1 text-lg">7077731257</span></a>
-            </div>
-            <div className="mt-5"><a href="https://www.google.com/maps/search/?api=1&query=The+Seven+Knots+Hall+Rohtak" target="_blank" rel="noopener" className="btn btn-primary">Get Directions <ArrowRight size={17} /></a></div>
           </div>
         </section>
 
