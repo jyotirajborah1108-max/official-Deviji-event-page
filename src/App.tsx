@@ -320,24 +320,17 @@ export default function App() {
 
         {/* 2 WATCH — product / invitation video */}
         <section id="watch" className="section bg-[var(--cream)]">
-          <div className="shell">
-            <div className="card overflow-hidden grid md:grid-cols-[1.1fr_.9fr] items-center md:items-stretch !rounded-[16px]">
-              <div className="p-6 sm:p-7 flex flex-col justify-center self-center min-w-0">
-                <p className="eyebrow">Watch the invitation • Upanishad Gyanamrit • Rohtak</p>
-                <h2 className="font-serif text-2xl sm:text-3xl leading-tight font-semibold mt-3"><a href="https://www.youtube.com/watch?v=8bOYzlsuDWI" target="_blank" rel="noopener" className="hover:text-[var(--saffron)] underline decoration-[var(--gold)] underline-offset-4 [overflow-wrap:anywhere]">Upanishad Gyanamrit Rohtak | उपनिषद् ज्ञानामृत | Raseshwari Devi Ji</a></h2>
-                <p className="body mt-3">Drink the nectar of profound knowledge with Pujaniya Raseshwari Devi Ji in Rohtak — 27 Nov – 10 Dec 2026, 6–8 PM daily, The Seven Knots Hall, Rohtak.</p>
-              </div>
-              <div className="p-4 sm:p-6 flex items-center justify-center min-w-0 self-center md:self-stretch">
-                <iframe 
-                  className="w-full max-w-full overflow-hidden shadow-[0_18px_40px_rgba(74,20,5,.18)]" 
-                  style={{ aspectRatio: "16 / 9", borderRadius: "16px", border: "3px solid var(--gold)" }}
-                  src="https://www.youtube.com/embed/8bOYzlsuDWI" 
-                  title="Upanishad Gyanamrit Rohtak Invitation Video" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowFullScreen
-                />
-              </div>
+          <div className="shell max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <iframe 
+                className="w-full max-w-full overflow-hidden shadow-[0_18px_40px_rgba(74,20,5,.18)]" 
+                style={{ aspectRatio: "16 / 9", borderRadius: "16px", border: "3px solid var(--gold)" }}
+                src="https://www.youtube.com/embed/8bOYzlsuDWI" 
+                title="Upanishad Gyanamrit Rohtak Invitation Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+              />
             </div>
           </div>
         </section>
