@@ -97,14 +97,6 @@ export default function App() {
             </figure>
             <div className="hero-glow left-1/2 -translate-x-1/2 top-2" aria-hidden="true" />
             <div className="relative hero-in max-w-3xl mx-auto mt-8">
-              <h1 className="font-serif mt-4 text-[clamp(3rem,8vw,5.6rem)] leading-[0.95] font-semibold">Drink the Nectar<br /><span className="italic text-[var(--saffron)]">of the Upanishads</span></h1>
-              <p className="mt-4 text-xl sm:text-2xl font-semibold">Upanishad Gyanamrit — <span className="font-dev">उपनिषद् ज्ञानामृत</span></p>
-              <p className="body mt-5 mx-auto max-w-2xl">Fourteen evenings with Pujaniya Raseshwari Devi Ji in Rohtak. Sit with the Upanishads — slowly, simply, in the company of devotion. Come as you are. Leave a little lighter.</p>
-              <div className="mt-6 flex flex-wrap justify-center gap-2.5">
-                {[["27 Nov – 10 Dec 2026", "14 days"], ["Daily • 6:00 PM – 8:00 PM", "प्रतिदिन शाम 6–8 बजे"], ["The Seven Knots Hall, Rohtak", "द सेवन नोट्स हॉल"]].map(([a, b]) => (
-                  <div key={a} className="pill"><span>{a}</span><span className="font-dev font-medium text-[var(--saffron)]">{b}</span></div>
-                ))}
-              </div>
               <div className="mt-7 flex flex-wrap justify-center gap-3">
                 <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener" className="btn btn-primary">Reserve Free Seat <ArrowRight size={18} /></a>
                 <a href="tel:8280342377" className="btn btn-outline"><Phone size={17} /> Call Now</a>
