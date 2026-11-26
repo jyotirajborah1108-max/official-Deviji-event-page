@@ -242,7 +242,7 @@ export default function App() {
               <Heading eyebrow="The Speaker" title="H.H. Raseshwari Devi Ji" hindi="परम पूज्य रासेश्वरी देवी जी" sub="Foremost preacher of Jagadguru Shri Kripalu Ji Maharaj. She has presented the complete philosophy of Sanatan Vedic Dharma that dispels doubts about Sanatan Dharma. Honoured with the Adarsh Yuva Adhyatmik Guru award by MIT WPU, Pune." />
               <div className="mt-5 flex flex-wrap gap-2">{["Upanishad Katha", "Shri Krishna Bhakti", "Sanatan Vedic Wisdom"].map((t) => <span key={t} className="pill">{t}</span>)}</div>
               <div className="mt-6 card p-5"><p className="text-xs tracking-widest font-bold text-[var(--saffron)]">SAYINGS OF THE SOUL</p><p className="font-serif text-xl sm:text-2xl leading-snug mt-2">"When the heart turns toward Shyam, even ordinary days begin to shine."</p></div>
-              <a href="https://www.raseshwarideviji.org/about" target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--saffron)]">Learn more at raseshwarideviji.org <ArrowRight size={17} /></a>
+              <a href="https://www.raseshwarideviji.org/about" target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--saffron)]">Learn more at raseshwarideviji <ArrowRight size={17} /></a>
             </div>
           </div>
         </section>
